@@ -2,6 +2,7 @@ package com.animeandmangalabs.vocaloidquizandroidedition;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -9,8 +10,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.ViewFlipper;
 public class Quiz_01 extends Activity {
 	
 		//Quiz init[start]
@@ -23,15 +27,11 @@ public class Quiz_01 extends Activity {
 		static int iQnum = 0;
 		static int iCorrect = 0;
 		static int iIncorrect = 0;
+		static RelativeLayout V2b,V2t;
+		static EditText quiz_text_input_1,quiz_text_input_2;
 		//Quiz init[end]
-	
-
-		public void reset_values(){
-			iQnum = 0;
-			iCorrect = 0;
-			iIncorrect = 0;
-			
-		}
+		
+		
 				
 				
 			
@@ -41,6 +41,7 @@ public class Quiz_01 extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_quiz_01);
 		// Show the Up button in the action bar.
+		
 		setupActionBar();
 		btn_a = (Button) findViewById(R.id.quiz_button_a);
 		btn_b = (Button) findViewById(R.id.quiz_button_b);
@@ -48,6 +49,10 @@ public class Quiz_01 extends Activity {
 		quiz_question_text = (TextView) findViewById(R.id.quiz_question);
 		tCorrect = (TextView) findViewById(R.id.tCorrect);
 		tIncorrect = (TextView) findViewById(R.id.tIncorrect);
+		V2b = (RelativeLayout) findViewById(R.id.view_2_buttons);
+		V2t = (RelativeLayout) findViewById(R.id.view_2_text);
+		quiz_text_input_1 = (EditText) findViewById(R.id.EditText01);
+		quiz_text_input_2 = (EditText) findViewById(R.id.EditText02);
 		//Link view items[end]
 		reset_values();
 		quiz_questions();
@@ -90,36 +95,40 @@ public class Quiz_01 extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-
-
-
-
-
-
+	
+//-----------------------------------------------------------------------------------------
+// QUIZ ENGINE 1,0 @COPYRIGHTS JEROEN MATHON 2013/2014    
+//-----------------------------------------------------------------------------------------
+	
+	public void reset_values(){
+		iQnum = 0;
+		iCorrect = 0;
+		iIncorrect = 0;
+		
+	}
+	
 	public static void Correct(){//When user's correct
-	iCorrect = iCorrect +1;
-	tCorrect.setText("Correct: " + iCorrect);
-	}
-	public static void Incorrect(){//When user's incorrect
-	iIncorrect = iIncorrect + 1;
-	tIncorrect.setText("Incorrect: " + iIncorrect);
-	}
-
-
+		iCorrect = iCorrect +1;
+		tCorrect.setText("Correct: " + iCorrect);
+		iQnum = iQnum + 1;
+		Quiz_01_Answers.Question(btn_a, btn_b, iQnum);
+		}
+		public static void Incorrect(){//When user's incorrect
+		iIncorrect = iIncorrect + 1;
+		tIncorrect.setText("Incorrect: " + iIncorrect);
+		iQnum = iQnum + 1;
+		Quiz_01_Answers.Question(btn_a, btn_b, iQnum);
+		}
+		
 	public static void quiz_questions(){
-
-		if(iQnum == 0){//Quiz Question num(1)
-		quiz_question_text.setText(R.string.q1_1);
-		quiz_img_view.setImageResource(R.drawable.miku_2);
-		btn_a.setText("Hatsune Miku");
-		btn_b.setText("Kagame Rin");
+		Quiz_01_Answers.Compare(btn_a, btn_b,iQnum);
 		
 			btn_a.setOnClickListener(new View.OnClickListener() {
 				
 				@Override
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
-					Correct();
+					Quiz_01_Answers.Compare(btn_a, btn_b,iQnum);
 				}
 			});
 			btn_b.setOnClickListener(new View.OnClickListener() {
@@ -127,11 +136,17 @@ public class Quiz_01 extends Activity {
 				@Override
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
-					Incorrect();
+					Quiz_01_Answers.Compare(btn_a, btn_b,iQnum);
 				}
 			});
-		}
+		
+	
 	}
+	
+//-----------------------------------------------------------------------------------------
+// END ENGINE  
+//-----------------------------------------------------------------------------------------
+
 
 	}
 	
