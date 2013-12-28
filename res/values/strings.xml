@@ -3,6 +3,8 @@
 
     <string name="app_name">Vocaloid Quiz Android Adition</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">Welcome to the Vocaloid Quiz BETA!</string>
+    <string name="start">Start</string>
+    <string name="title_activity_quiz_01">Quiz_01</string>
 
 </resources>
