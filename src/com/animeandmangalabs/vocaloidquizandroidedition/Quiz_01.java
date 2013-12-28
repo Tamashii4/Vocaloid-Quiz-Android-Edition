@@ -23,6 +23,7 @@ public class Quiz_01 extends Activity {
 		static int iQnum = 0;
 		static int iCorrect = 0;
 		static int iIncorrect = 0;
+		
 		//Quiz init[end]
 	
 
@@ -89,6 +90,7 @@ public class Quiz_01 extends Activity {
 //-----------------------------------------------------------------------------------------
 // QUIZ ENGINE 1,0 @COPYRIGHTS JEROEN MATHON 2013/2014    
 //-----------------------------------------------------------------------------------------
+	
 	public void reset_values(){
 		iQnum = 0;
 		iCorrect = 0;
@@ -99,26 +101,25 @@ public class Quiz_01 extends Activity {
 	public static void Correct(){//When user's correct
 		iCorrect = iCorrect +1;
 		tCorrect.setText("Correct: " + iCorrect);
+		iQnum = iQnum + 1;
+		Quiz_01_Answers.Question(btn_a, btn_b, iQnum);
 		}
 		public static void Incorrect(){//When user's incorrect
 		iIncorrect = iIncorrect + 1;
 		tIncorrect.setText("Incorrect: " + iIncorrect);
+		iQnum = iQnum + 1;
+		Quiz_01_Answers.Question(btn_a, btn_b, iQnum);
 		}
-	
+		
 	public static void quiz_questions(){
-
-		if(iQnum == 0){//Quiz Question num(1)
-		quiz_question_text.setText(R.string.q1_1);
-		quiz_img_view.setImageResource(R.drawable.miku_2);
-		btn_a.setText("Hatsune Miku");
-		btn_b.setText("Kagame Rin");
+		Quiz_01_Answers.Compare(btn_a, btn_b,iQnum);
 		
 			btn_a.setOnClickListener(new View.OnClickListener() {
 				
 				@Override
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
-					Correct();
+					Quiz_01_Answers.Compare(btn_a, btn_b,iQnum);
 				}
 			});
 			btn_b.setOnClickListener(new View.OnClickListener() {
@@ -126,11 +127,13 @@ public class Quiz_01 extends Activity {
 				@Override
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
-					Incorrect();
+					Quiz_01_Answers.Compare(btn_a, btn_b,iQnum);
 				}
 			});
-		}
+		
+	
 	}
+	
 //-----------------------------------------------------------------------------------------
 // END ENGINE  
 //-----------------------------------------------------------------------------------------
