@@ -11,5 +11,5 @@
     <string name="sCorrect">&quot;Correct: 0&quot;</string>
     <string name="sIncorrect">&quot;Incorrect: 0&quot;</string>
     <string name="q1_2">What is the last name of these twins?</string>
-
+	<string name="q1_3">Please put the names in the correct place.</string>
 </resources>

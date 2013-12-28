@@ -121,14 +121,14 @@ public class Quiz_01 extends Activity {
 		}
 		
 	public static void quiz_questions(){
-		Quiz_01_Answers.Compare(btn_a, btn_b,iQnum);
+		Quiz_01_Answers.Compare(btn_a, btn_b,iQnum,quiz_text_input_1, quiz_text_input_2);
 		
 			btn_a.setOnClickListener(new View.OnClickListener() {
 				
 				@Override
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
-					Quiz_01_Answers.Compare(btn_a, btn_b,iQnum);
+					Quiz_01_Answers.Compare(btn_a, btn_b,iQnum, quiz_text_input_1,quiz_text_input_2);
 				}
 			});
 			btn_b.setOnClickListener(new View.OnClickListener() {
@@ -136,7 +136,7 @@ public class Quiz_01 extends Activity {
 				@Override
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
-					Quiz_01_Answers.Compare(btn_a, btn_b,iQnum);
+					Quiz_01_Answers.Compare(btn_a, btn_b,iQnum,quiz_text_input_1,quiz_text_input_2);
 				}
 			});
 		
