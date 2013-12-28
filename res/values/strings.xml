@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Vocaloid Quiz Android Adition</string>
+    <string name="app_name">Vocaloid Quiz Android Edition</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Welcome to the Vocaloid Quiz BETA!</string>
     <string name="start">Start</string>
     <string name="title_activity_quiz_01">Quiz_01</string>
+    <string name="image_of_quiz_question">Image of Quiz Question</string>
+    <string-array name="Quiz_Questions_1">
+        <item >Who is the vocaloid in this picture?</item>
+    </string-array>
 
 </resources>

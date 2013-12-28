@@ -1,21 +1,38 @@
-package com.animeandmangalabs.vocaloidquizandroidadition;
+package com.animeandmangalabs.vocaloidquizandroidedition;
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
 import android.os.Build;
-
 public class Quiz_01 extends Activity {
-
+	
+		//Quiz Engine import[start]
+		Button btn_a;	//Button A of the interface
+		Button btn_b;	//Button B of the interface
+		ImageView quiz_img_view;	//ImageView of the interface
+		TextView quiz_question_text;	//TextView of the interface
+		//Quiz Engine import[end]
+		
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_quiz_01);
 		// Show the Up button in the action bar.
 		setupActionBar();
+		
+		//Link view items[start]
+		btn_a = (Button) findViewById(R.id.quiz_button_a);
+		btn_b = (Button) findViewById(R.id.quiz_button_b);
+		quiz_img_view = (ImageView) findViewById(R.id.quiz_image);
+		quiz_question_text = (TextView) findViewById(R.id.quiz_question);
+		//Link view items[end]
+		quiz_engine.quiz_questions(btn_a,btn_b, quiz_img_view, quiz_question_text);
 	}
 
 	/**

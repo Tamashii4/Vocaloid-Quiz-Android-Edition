@@ -1,4 +1,4 @@
-package com.animeandmangalabs.vocaloidquizandroidadition;
+package com.animeandmangalabs.vocaloidquizandroidedition;
 
 import android.os.Bundle;
 import android.app.Activity;
