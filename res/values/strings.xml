@@ -8,7 +8,7 @@
     <string name="title_activity_quiz_01">Quiz_01</string>
     <string name="image_of_quiz_question">Image of Quiz Question</string>
     <string name="q1_1">Who is the vocaloid in this picture?</string>
-    <string name="sCorrect">"Correct: "</string>
-    <string name="sIncorrect">"Incorrect: "</string>
+    <string name="sCorrect">&quot;Correct: 0&quot;</string>
+    <string name="sIncorrect">&quot;Incorrect: 0&quot;</string>
 
 </resources>
