@@ -2,6 +2,7 @@ package com.animeandmangalabs.vocaloidquizandroidedition;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -9,8 +10,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.ViewFlipper;
 public class Quiz_01 extends Activity {
 	
 		//Quiz init[start]
@@ -23,10 +27,10 @@ public class Quiz_01 extends Activity {
 		static int iQnum = 0;
 		static int iCorrect = 0;
 		static int iIncorrect = 0;
-		
+		static RelativeLayout V2b,V2t;
+		static EditText quiz_text_input_1,quiz_text_input_2;
 		//Quiz init[end]
-	
-
+		
 		
 				
 				
@@ -37,6 +41,7 @@ public class Quiz_01 extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_quiz_01);
 		// Show the Up button in the action bar.
+		
 		setupActionBar();
 		btn_a = (Button) findViewById(R.id.quiz_button_a);
 		btn_b = (Button) findViewById(R.id.quiz_button_b);
@@ -44,6 +49,10 @@ public class Quiz_01 extends Activity {
 		quiz_question_text = (TextView) findViewById(R.id.quiz_question);
 		tCorrect = (TextView) findViewById(R.id.tCorrect);
 		tIncorrect = (TextView) findViewById(R.id.tIncorrect);
+		V2b = (RelativeLayout) findViewById(R.id.view_2_buttons);
+		V2t = (RelativeLayout) findViewById(R.id.view_2_text);
+		quiz_text_input_1 = (EditText) findViewById(R.id.EditText01);
+		quiz_text_input_2 = (EditText) findViewById(R.id.EditText02);
 		//Link view items[end]
 		reset_values();
 		quiz_questions();

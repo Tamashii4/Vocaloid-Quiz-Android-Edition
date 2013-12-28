@@ -27,15 +27,21 @@ public final class R {
         public static final int miku_2=0x7f020003;
     }
     public static final class id {
+        public static final int EditText01=0x7f080008;
+        public static final int EditText02=0x7f08000a;
+        public static final int ImageView01=0x7f080009;
+        public static final int ImageView02=0x7f080004;
         public static final int RelativeLayout1=0x7f080002;
-        public static final int action_settings=0x7f080008;
+        public static final int action_settings=0x7f08000e;
         public static final int main_start_button=0x7f080001;
-        public static final int quiz_button_a=0x7f080004;
-        public static final int quiz_button_b=0x7f080005;
-        public static final int quiz_image=0x7f080003;
+        public static final int quiz_button_a=0x7f080005;
+        public static final int quiz_button_b=0x7f080006;
+        public static final int quiz_image=0x7f08000d;
         public static final int quiz_question=0x7f080000;
-        public static final int tCorrect=0x7f080007;
-        public static final int tIncorrect=0x7f080006;
+        public static final int tCorrect=0x7f08000c;
+        public static final int tIncorrect=0x7f08000b;
+        public static final int view_2_buttons=0x7f080003;
+        public static final int view_2_text=0x7f080007;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;

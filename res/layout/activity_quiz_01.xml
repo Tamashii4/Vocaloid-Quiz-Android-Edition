@@ -10,51 +10,100 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Quiz_01" >
 
-    <TextView
-        android:id="@id/quiz_question"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="33dp"
-        android:text="@string/q1_1"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <RelativeLayout
+        android:id="@+id/view_2_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" >
 
-    <ImageView
-        android:id="@+id/quiz_image"
-        android:layout_width="400dp"
-        android:layout_height="400dp"
-        android:layout_below="@id/quiz_question"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="31dp"
-        android:contentDescription="@+string/image_of_quiz_question"
-        android:src="@drawable/miku_2" />
+        <ImageView
+            android:id="@+id/ImageView02"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="56dp"
+            android:contentDescription="@+string/image_of_quiz_question"
+            android:src="@drawable/miku_2"
+            android:visibility="invisible" />
 
-    <Button
-        android:id="@+id/quiz_button_a"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/quiz_image"
-        android:layout_below="@+id/quiz_image"
-        android:layout_marginTop="37dp"
-        android:text="Hatsune Miku" />
+        <Button
+            android:id="@+id/quiz_button_a"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/ImageView02"
+            android:layout_below="@+id/ImageView02"
+            android:layout_marginTop="27dp"
+            android:text="Hatsune Miku" />
 
-    <Button
-        android:id="@+id/quiz_button_b"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/quiz_button_a"
-        android:layout_alignBottom="@+id/quiz_button_a"
-        android:layout_toRightOf="@+id/quiz_button_a"
-        android:text="Kagame Rin" />
+        <Button
+            android:id="@+id/quiz_button_b"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/quiz_button_a"
+            android:layout_alignBottom="@+id/quiz_button_a"
+            android:layout_toRightOf="@+id/quiz_button_a"
+            android:text="Kagame Rin" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/view_2_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:visibility="gone" >
+
+        <EditText
+            android:id="@+id/EditText01"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/ImageView01"
+            android:layout_below="@+id/ImageView01"
+            android:layout_marginTop="39dp"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <EditText
+            android:id="@+id/EditText02"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/EditText01"
+            android:layout_alignRight="@+id/ImageView01"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false" >
+
+            <requestFocus />
+        </EditText>
+
+        <ImageView
+            android:id="@+id/ImageView01"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="71dp"
+            android:contentDescription="@+string/image_of_quiz_question"
+            android:src="@drawable/miku_2"
+            android:visibility="invisible" />
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/tIncorrect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/tCorrect"
-        android:layout_marginLeft="33dp"
+        android:layout_alignTop="@+id/view_2_buttons"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="71dp"
         android:text="@string/sIncorrect"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -62,9 +111,28 @@
         android:id="@+id/tCorrect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tIncorrect"
         android:layout_alignRight="@+id/tIncorrect"
-        android:layout_below="@id/quiz_question"
+        android:layout_marginBottom="25dp"
         android:text="@string/sCorrect"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@id/quiz_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tCorrect"
+        android:layout_centerHorizontal="true"
+        android:text="@string/q1_1"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/quiz_image"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_alignTop="@+id/tIncorrect"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@+string/image_of_quiz_question"
+        android:src="@drawable/miku_2" />
 
 </RelativeLayout>
