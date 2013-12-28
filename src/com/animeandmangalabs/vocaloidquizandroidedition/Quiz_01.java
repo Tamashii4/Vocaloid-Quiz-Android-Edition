@@ -26,12 +26,7 @@ public class Quiz_01 extends Activity {
 		//Quiz init[end]
 	
 
-		public void reset_values(){
-			iQnum = 0;
-			iCorrect = 0;
-			iIncorrect = 0;
-			
-		}
+		
 				
 				
 			
@@ -90,22 +85,26 @@ public class Quiz_01 extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-
-
-
-
-
-
+	
+//-----------------------------------------------------------------------------------------
+// QUIZ ENGINE 1,0 @COPYRIGHTS JEROEN MATHON 2013/2014    
+//-----------------------------------------------------------------------------------------
+	public void reset_values(){
+		iQnum = 0;
+		iCorrect = 0;
+		iIncorrect = 0;
+		
+	}
+	
 	public static void Correct(){//When user's correct
-	iCorrect = iCorrect +1;
-	tCorrect.setText("Correct: " + iCorrect);
-	}
-	public static void Incorrect(){//When user's incorrect
-	iIncorrect = iIncorrect + 1;
-	tIncorrect.setText("Incorrect: " + iIncorrect);
-	}
-
-
+		iCorrect = iCorrect +1;
+		tCorrect.setText("Correct: " + iCorrect);
+		}
+		public static void Incorrect(){//When user's incorrect
+		iIncorrect = iIncorrect + 1;
+		tIncorrect.setText("Incorrect: " + iIncorrect);
+		}
+	
 	public static void quiz_questions(){
 
 		if(iQnum == 0){//Quiz Question num(1)
@@ -132,6 +131,10 @@ public class Quiz_01 extends Activity {
 			});
 		}
 	}
+//-----------------------------------------------------------------------------------------
+// END ENGINE  
+//-----------------------------------------------------------------------------------------
+
 
 	}
 	
