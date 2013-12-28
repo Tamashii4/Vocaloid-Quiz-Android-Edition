@@ -20,8 +20,8 @@ public class quiz_engine {
 			//Quiz Quesitons
 			
 				
-				static String qsS1,qsS2,qsS3;
-				q1 = "Hello";
+				//static String qsS1,qsS2,qsS3;
+				//q1 = "Hello";
 				
 			
 			
@@ -51,7 +51,7 @@ public class quiz_engine {
 	public static void quiz_questions(){
 		
 			if(iQnum == 0){//Quiz Question num(1)
-				quiz_question_text.setText(q1);
+			//	quiz_question_text.setText(q1);
 			}
 	}
 	
