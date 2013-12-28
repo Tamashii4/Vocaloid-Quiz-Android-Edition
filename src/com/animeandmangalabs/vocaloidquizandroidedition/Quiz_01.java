@@ -12,13 +12,14 @@ import android.annotation.TargetApi;
 import android.os.Build;
 public class Quiz_01 extends Activity {
 	
-		//Quiz Engine import[start]
-		Button btn_a;	//Button A of the interface
-		Button btn_b;	//Button B of the interface
-		ImageView quiz_img_view;	//ImageView of the interface
-		TextView quiz_question_text;	//TextView of the interface
-		//Quiz Engine import[end]
-		
+		//Quiz init[start]
+		static Button btn_a;	//Button A and B of the interface
+		static Button btn_b;
+		static ImageView quiz_img_view;	//ImageView of the interface
+		static TextView quiz_question_text;	//TextView's of the interface
+		static TextView tCorrect;
+		static TextView tIncorrect;
+		//Quiz init[end]
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -31,8 +32,11 @@ public class Quiz_01 extends Activity {
 		btn_b = (Button) findViewById(R.id.quiz_button_b);
 		quiz_img_view = (ImageView) findViewById(R.id.quiz_image);
 		quiz_question_text = (TextView) findViewById(R.id.quiz_question);
+		tCorrect = (TextView) findViewById(R.id.tCorrect);
+		tIncorrect = (TextView) findViewById(R.id.tIncorrect);
 		//Link view items[end]
-		quiz_engine.quiz_questions(btn_a,btn_b, quiz_img_view, quiz_question_text);
+		quiz_engine.quiz_questions();
+		
 	}
 
 	/**
