@@ -17,7 +17,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp"
-        android:text=""
+        android:text="@string/q1_1"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <ImageView
@@ -27,7 +27,8 @@
         android:layout_below="@id/quiz_question"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="31dp"
-        android:contentDescription="@+string/image_of_quiz_question" />
+        android:contentDescription="@+string/image_of_quiz_question"
+        android:src="@drawable/miku_2" />
 
     <Button
         android:id="@+id/quiz_button_a"
@@ -35,7 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/quiz_image"
         android:layout_below="@+id/quiz_image"
-        android:layout_marginTop="37dp" />
+        android:layout_marginTop="37dp"
+        android:text="Hatsune Miku" />
 
     <Button
         android:id="@+id/quiz_button_b"
@@ -43,7 +45,8 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/quiz_button_a"
         android:layout_alignBottom="@+id/quiz_button_a"
-        android:layout_toRightOf="@+id/quiz_button_a" />
+        android:layout_toRightOf="@+id/quiz_button_a"
+        android:text="Kagame Rin" />
 
     <TextView
         android:id="@+id/tIncorrect"
