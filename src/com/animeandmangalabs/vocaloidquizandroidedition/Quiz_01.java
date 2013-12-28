@@ -19,6 +19,7 @@ public class Quiz_01 extends Activity {
 		static TextView quiz_question_text;	//TextView's of the interface
 		static TextView tCorrect;
 		static TextView tIncorrect;
+		
 		//Quiz init[end]
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,7 @@ public class Quiz_01 extends Activity {
 		tCorrect = (TextView) findViewById(R.id.tCorrect);
 		tIncorrect = (TextView) findViewById(R.id.tIncorrect);
 		//Link view items[end]
-		quiz_engine.quiz_questions();
+		quiz_engine.main();
 		
 	}
 

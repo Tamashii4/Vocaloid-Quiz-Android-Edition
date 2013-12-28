@@ -7,8 +7,8 @@
     <string name="start">Start</string>
     <string name="title_activity_quiz_01">Quiz_01</string>
     <string name="image_of_quiz_question">Image of Quiz Question</string>
-    <string-array name="Quiz_Questions_1">
-        <item >Who is the vocaloid in this picture?</item>
-    </string-array>
+    <string name="q1_1">Who is the vocaloid in this picture?</string>
+    <string name="sCorrect">"Correct: "</string>
+    <string name="sIncorrect">"Incorrect: "</string>
 
 </resources>

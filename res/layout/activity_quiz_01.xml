@@ -3,6 +3,7 @@
     android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="left"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -45,20 +46,22 @@
         android:layout_toRightOf="@+id/quiz_button_a" />
 
     <TextView
-        android:id="@+id/tCorrect"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/quiz_question"
-        android:layout_alignBottom="@id/quiz_question"
-        android:layout_alignParentLeft="true"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
         android:id="@+id/tIncorrect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tCorrect"
+        android:layout_alignParentLeft="true"
         android:layout_below="@+id/tCorrect"
+        android:layout_marginLeft="33dp"
+        android:text="@string/sIncorrect"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tCorrect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tIncorrect"
+        android:layout_below="@id/quiz_question"
+        android:text="@string/sCorrect"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>
