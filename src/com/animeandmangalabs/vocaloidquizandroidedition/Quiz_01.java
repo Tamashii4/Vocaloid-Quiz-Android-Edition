@@ -97,7 +97,7 @@ public class Quiz_01 extends Activity {
 	}
 	
 //-----------------------------------------------------------------------------------------
-// QUIZ ENGINE 1,0 @COPYRIGHTS JEROEN MATHON 2013/2014    
+// QUIZ ENGINE 1,0 @COPYRIGHTS 2013/2014 JEROEN MATHON    
 //-----------------------------------------------------------------------------------------
 	
 	public void reset_values(){
