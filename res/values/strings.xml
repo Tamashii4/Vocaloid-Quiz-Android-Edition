@@ -24,5 +24,6 @@
     <string name="contdescqiuz1">button for first quiz</string>
     <string name="hatsune_miku">Hatsune Miku</string>
     <string name="kagame_rin">Kagame Rin</string>
+    <string name="quiz_01_btn_text">Submit</string>
 
 </resources>

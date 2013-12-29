@@ -16,17 +16,15 @@ import android.widget.TextView;
 public class Quiz_01 extends Activity {
 	
 		//Quiz init[start]
-		static Button btn_a;	//Button A and B of the interface
-		static Button btn_b;
+		static Button btn_a,btn_b,btn_submit;	//Button A and B of the interface
 		static ImageView quiz_img_view;	//ImageView of the interface
-		static TextView quiz_question_text;	//TextView's of the interface
-		static TextView tCorrect;
-		static TextView tIncorrect;
+		static TextView tCorrect,quiz_question_text,tIncorrect;
+		static EditText quiz_text_input_1,quiz_text_input_2;
 		static int iQnum = 0;
 		static int iCorrect = 0;
 		static int iIncorrect = 0;
 		static RelativeLayout V2b,V2t;
-		static EditText quiz_text_input_1,quiz_text_input_2;
+
 		//Quiz init[end]
 		
 		
@@ -51,6 +49,7 @@ public class Quiz_01 extends Activity {
 		V2t = (RelativeLayout) findViewById(R.id.view_2_text);
 		quiz_text_input_1 = (EditText) findViewById(R.id.EditText01);
 		quiz_text_input_2 = (EditText) findViewById(R.id.EditText02);
+		btn_submit = (Button) findViewById(R.id.quiz_01_btn_submit);
 		//Link view items[end]
 		reset_values();
 		quiz_questions();
@@ -119,14 +118,14 @@ public class Quiz_01 extends Activity {
 		}
 		
 	public static void quiz_questions(){
-		Quiz_01_Answers.Compare(btn_a, btn_b,iQnum,quiz_text_input_1, quiz_text_input_2);
+		Quiz_01_Answers.Compare(btn_a, btn_b,btn_submit, iQnum,quiz_text_input_1, quiz_text_input_2);
 		
 			btn_a.setOnClickListener(new View.OnClickListener() {
 				
 				@Override
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
-					Quiz_01_Answers.Compare(btn_a, btn_b,iQnum, quiz_text_input_1,quiz_text_input_2);
+					Quiz_01_Answers.Compare(btn_a, btn_b,btn_submit, iQnum, quiz_text_input_1,quiz_text_input_2);
 				}
 			});
 			btn_b.setOnClickListener(new View.OnClickListener() {
@@ -134,7 +133,15 @@ public class Quiz_01 extends Activity {
 				@Override
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
-					Quiz_01_Answers.Compare(btn_a, btn_b,iQnum,quiz_text_input_1,quiz_text_input_2);
+					Quiz_01_Answers.Compare(btn_a, btn_b,btn_submit, iQnum,quiz_text_input_1,quiz_text_input_2);
+				}
+			});
+			btn_submit.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					Quiz_01_Answers.Compare(btn_a, btn_b,btn_submit, iQnum,quiz_text_input_1,quiz_text_input_2);
 				}
 			});
 		
