@@ -28,7 +28,7 @@
             android:parentActivityName="com.animeandmangalabs.vocaloidquizandroidedition.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.animeandmangalabs.vocaloidquizandroidedition.MainActivity" />
+                android:value="com.animeandmangalabs.vocaloidquizandroidedition.Quiz_Selection_menu" />
         </activity>
         <activity
             android:name="com.animeandmangalabs.vocaloidquizandroidedition.Quiz_Selection_menu"

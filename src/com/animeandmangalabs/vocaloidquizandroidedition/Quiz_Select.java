@@ -3,12 +3,17 @@ package com.animeandmangalabs.vocaloidquizandroidedition;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.Menu;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
 public class Quiz_Select extends Activity {
@@ -17,7 +22,7 @@ public class Quiz_Select extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz__select);
-        btn_q1 = (ImageButton)findViewById(R.id.quiz_select_miku);
+        btn_q1 = (ImageButton)findViewById(R.id.quiz_select_q1);
         main();
     }
     
@@ -34,7 +39,7 @@ public class Quiz_Select extends Activity {
 		});
     }
 
-
+   
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

@@ -21,5 +21,6 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_quiz__select">Quiz_Select</string>
     <string name="cont_miku_select">selects miku</string>
+    <string name="contdescqiuz1">button for first quiz</string>
 
 </resources>
