@@ -22,5 +22,7 @@
     <string name="title_activity_quiz__select">Quiz_Select</string>
     <string name="cont_miku_select">selects miku</string>
     <string name="contdescqiuz1">button for first quiz</string>
+    <string name="hatsune_miku">Hatsune Miku</string>
+    <string name="kagame_rin">Kagame Rin</string>
 
 </resources>

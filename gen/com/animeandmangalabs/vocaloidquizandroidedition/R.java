@@ -228,8 +228,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int contdescqiuz1=0x7f060014;
         public static final int dummy_button=0x7f060010;
         public static final int dummy_content=0x7f060011;
+        public static final int hatsune_miku=0x7f060015;
         public static final int hello_world=0x7f060005;
         public static final int image_of_quiz_question=0x7f060008;
+        public static final int kagame_rin=0x7f060016;
         public static final int main_menu_text_1=0x7f060002;
         public static final int main_menu_text_2=0x7f060003;
         public static final int main_menu_text_3=0x7f060004;

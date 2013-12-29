@@ -37,7 +37,7 @@
             android:layout_alignLeft="@+id/ImageView02"
             android:layout_below="@+id/ImageView02"
             android:layout_marginTop="27dp"
-            android:text="Hatsune Miku" />
+            android:text="@string/hatsune_miku" />
 
         <Button
             android:id="@+id/quiz_button_b"
@@ -46,7 +46,7 @@
             android:layout_alignBaseline="@+id/quiz_button_a"
             android:layout_alignBottom="@+id/quiz_button_a"
             android:layout_toRightOf="@+id/quiz_button_a"
-            android:text="Kagame Rin" />
+            android:text="@string/kagame_rin" />
 
     </RelativeLayout>
 

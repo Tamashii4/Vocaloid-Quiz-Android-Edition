@@ -25,10 +25,10 @@
         <activity
             android:name="com.animeandmangalabs.vocaloidquizandroidedition.Quiz_01"
             android:label="@string/title_activity_quiz_01"
-            android:parentActivityName="com.animeandmangalabs.vocaloidquizandroidedition.MainActivity" >
+            android:parentActivityName="com.animeandmangalabs.vocaloidquizandroidedition.Quiz_Select" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.animeandmangalabs.vocaloidquizandroidedition.Quiz_Selection_menu" />
+                android:value="com.animeandmangalabs.vocaloidquizandroidedition.Quiz_Select" />
         </activity>
         <activity
             android:name="com.animeandmangalabs.vocaloidquizandroidedition.Quiz_Selection_menu"
