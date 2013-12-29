@@ -5,10 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 
 public class MainActivity extends Activity {
 public static Button btn_start;
+private AlphaAnimation buttonClick = new AlphaAnimation(10F, 0.5F);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +22,8 @@ public static Button btn_start;
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent(MainActivity.this, Quiz_01.class);
+				v.startAnimation(buttonClick);
+				Intent intent = new Intent(MainActivity.this, Quiz_Select.class);
 				startActivity(intent);
 				
 				

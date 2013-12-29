@@ -2,7 +2,6 @@ package com.animeandmangalabs.vocaloidquizandroidedition;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -14,7 +13,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.ViewFlipper;
 public class Quiz_01 extends Activity {
 	
 		//Quiz init[start]
