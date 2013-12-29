@@ -3,6 +3,9 @@
 
     <string name="app_name">Vocaloid Quiz Android Edition</string>
     <string name="action_settings">Settings</string>
+    <string name="main_menu_text_1">Welcome to the vocaloid quiz!</string>
+    <string name="main_menu_text_2">This quiz is designed to test your knowledge about vocaloid.</string>
+    <string name="main_menu_text_3">click next to continue</string>
     <string name="hello_world">Welcome to the Vocaloid Quiz BETA!</string>
     <string name="start">Start</string>
     <string name="title_activity_quiz_01">Quiz_01</string>
@@ -11,5 +14,12 @@
     <string name="sCorrect">&quot;Correct: 0&quot;</string>
     <string name="sIncorrect">&quot;Incorrect: 0&quot;</string>
     <string name="q1_2">What is the last name of these twins?</string>
+    <string name="q1_3">Please put the names in the correct place.</string>
+    <string name="btn_main_menu">Next</string>
+    <string name="title_activity_quiz__selection_menu">Quiz_Selection_menu</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_quiz__select">Quiz_Select</string>
+    <string name="cont_miku_select">selects miku</string>
 
 </resources>
