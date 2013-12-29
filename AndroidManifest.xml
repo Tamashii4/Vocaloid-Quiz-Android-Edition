@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="19" />
 
     <application
@@ -29,6 +29,16 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.animeandmangalabs.vocaloidquizandroidedition.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.animeandmangalabs.vocaloidquizandroidedition.Quiz_Selection_menu"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_quiz__selection_menu"
+            android:theme="@style/FullscreenTheme" >
+        </activity>
+        <activity
+            android:name="com.animeandmangalabs.vocaloidquizandroidedition.Quiz_Select"
+            android:label="@string/title_activity_quiz__select" >
         </activity>
     </application>
 

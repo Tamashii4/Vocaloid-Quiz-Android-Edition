@@ -2,7 +2,6 @@ package com.animeandmangalabs.vocaloidquizandroidedition;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -14,7 +13,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.ViewFlipper;
 public class Quiz_01 extends Activity {
 	
 		//Quiz init[start]
@@ -97,7 +95,7 @@ public class Quiz_01 extends Activity {
 	}
 	
 //-----------------------------------------------------------------------------------------
-// QUIZ ENGINE 1,0 @COPYRIGHTS JEROEN MATHON 2013/2014    
+// QUIZ ENGINE 1,0 @COPYRIGHTS 2013/2014 JEROEN MATHON    
 //-----------------------------------------------------------------------------------------
 	
 	public void reset_values(){
@@ -121,14 +119,14 @@ public class Quiz_01 extends Activity {
 		}
 		
 	public static void quiz_questions(){
-		Quiz_01_Answers.Compare(btn_a, btn_b,iQnum);
+		Quiz_01_Answers.Compare(btn_a, btn_b,iQnum,quiz_text_input_1, quiz_text_input_2);
 		
 			btn_a.setOnClickListener(new View.OnClickListener() {
 				
 				@Override
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
-					Quiz_01_Answers.Compare(btn_a, btn_b,iQnum);
+					Quiz_01_Answers.Compare(btn_a, btn_b,iQnum, quiz_text_input_1,quiz_text_input_2);
 				}
 			});
 			btn_b.setOnClickListener(new View.OnClickListener() {
@@ -136,7 +134,7 @@ public class Quiz_01 extends Activity {
 				@Override
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
-					Quiz_01_Answers.Compare(btn_a, btn_b,iQnum);
+					Quiz_01_Answers.Compare(btn_a, btn_b,iQnum,quiz_text_input_1,quiz_text_input_2);
 				}
 			});
 		
